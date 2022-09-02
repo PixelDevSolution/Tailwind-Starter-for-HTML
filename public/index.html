@@ -1,0 +1,102 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vanilla js | Random Hex Color Generator</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<section
+			class="relative container mx-auto sm:w-1/2 md:w-1/2 w-4/5 h-72 flex flex-col md:flex-col lg:flex-col items-center justify-center border p-6 rounded-xl my-80 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500"
+		>
+			<div class="m">
+				<h2 class="text-3xl text-center font-bold text-white my-2">
+					Vanilla js Custom Modal with Tailwind CSS
+				</h2>
+				<p class="text-xl text-left text-white">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla ab
+					aliquid ratione sequi atque vero sunt. Quod, neque exercitationem!
+					Sunt ipsam quaerat est voluptatem fuga quisquam iure consequatur
+					sapiente architecto.
+				</p>
+				<button
+					class="btn px-6 pb-3 pt-2 border rounded-full mt-10 font-bold text-white text-xl hover:text-violet-500 transition-all hover:bg-white"
+				>
+					Modal Open
+				</button>
+			</div>
+		</section>
+		<section
+			class="animate-wiggle hidden fixed top-20 left-48 mb-32 modal-container container mx-auto w-3/4 bg-gray-500 bg-opacity-80 border-0 rounded-xl p-6"
+		>
+			<!-- Modal body -->
+			<div class="p-6 space-y-6">
+				<button
+					class="close absolute right-20 top-6 text-left font-black text-white text-2xl border px-3 pb-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all"
+				>
+					&times;
+				</button>
+				<p class="text-lg leading-relaxed text-white">
+					With less than a month to go before the European Union enacts new
+					consumer privacy laws for its citizens, companies around the world are
+					updating their terms of service agreements to comply.
+				</p>
+				<p class="text-lg leading-relaxed text-white">
+					The European Union’s General Data Protection Regulation (G.D.P.R.)
+					goes into effect on May 25 and is meant to ensure a common set of data
+					rights in the European Union. It requires organizations to notify
+					users as soon as possible of high-risk data breaches that could
+					personally affect them.
+				</p>
+			</div>
+			<!-- Modal footer -->
+			<div
+				class="flex items-center p-6 space-x-2 rounded-b border-t border-white"
+			>
+				<button
+					data-modal-toggle="defaultModal"
+					type="button"
+					class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+				>
+					I accept
+				</button>
+				<button
+					data-modal-toggle="defaultModal"
+					type="button"
+					class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600"
+				>
+					Decline
+				</button>
+			</div>
+		</section>
+		<script>
+			// VARIABLES
+			const modal = document.querySelector(".modal-container"),
+				btn = document.querySelector(".btn"),
+				close = document.querySelector(".close");
+
+			btn.addEventListener("click", openModal);
+			close.addEventListener("click", closeModal);
+			modal.addEventListener("click", closeModal);
+
+			// OPEN MODAL
+			function openModal(e) {
+				e.preventDefault();
+				modal.style.display = "block";
+			}
+			// CLOSE MODAL
+			function closeModal() {
+				modal.style.display = "none";
+			}
+		</script>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

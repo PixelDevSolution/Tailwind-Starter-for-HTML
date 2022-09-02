@@ -1,0 +1,11 @@
+{
+	"name": "testapp",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "npx tailwindcss -i ./src/input.css -o ./public/css/style.css --watch",
+		"prod": "npx tailwindcss -i ./src/input.css -o ./public/css/style.css --minify"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.0.23"
+	}
+}
